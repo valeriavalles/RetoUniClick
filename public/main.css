@@ -14,13 +14,29 @@ header {
 }
 .content-rosa {
     background: #D9534F;
-    padding: 2%;
+    padding: 4%;
     margin-bottom: 4%;
 }
-
+h1 {
+    margin-top: 4%;
+}
 img {
     width: 100%;
 }
+.item {
+    padding: 3.5%;
+}
 .item  img{
     border-radius: 100%;
+}
+.cont-imgs {
+   
+    padding: 3%;
+    color: #fff;
+}
+#text-hide {
+    margin-top: 3%;
+}
+.cont-input {
+    margin-left: 2%;
 }
