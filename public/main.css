@@ -15,3 +15,7 @@ header {
 .content-rosa {
     background: #D9534F;
 }
+
+img {
+    width: 100%;
+}
