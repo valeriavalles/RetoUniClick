@@ -14,8 +14,13 @@ header {
 }
 .content-rosa {
     background: #D9534F;
+    padding: 2%;
+    margin-bottom: 4%;
 }
 
 img {
     width: 100%;
+}
+.item  img{
+    border-radius: 100%;
 }
