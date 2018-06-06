@@ -15,30 +15,39 @@ $( document ).ready(function() {
     console.log(valor);
     console.log(valor2);
     
+    
     console.log('hola boton')
     var responseContent = $('#response-content');
     var proxy = 'https://cors-anywhere.herokuapp.com/';
-    var apiLinkDS = 'http://lectorweb.uniclickdigital.com/api/ahorro/${valor}/5';
-    
-
-    var button = $('#btn');
-    
+    var apiLinkDS = `http://lectorweb.uniclickdigital.com/api/ahorro/${valor}/${valor2}`;  
       $.ajax({
         url: proxy + apiLinkDS,
         success: function(data) { 
            var tasas = data
-          
-
           console.log(tasas);
-     
         }
       }).done(addNews);
       
       function addNews(data) {
-         const mostrat = data;          
-        // console.log(humidi);
-        const template = `<div>${mostrat}<div>`
-        $('.conten-info').innerHtml = template;
+         
+         const mostrat = data.data;
+         const newInteres = data.tasa; 
+         console.log(mostrat);
+         console.log(newInteres);
+        const lista = Object.keys(mostrat) 
+        console.log(lista.length);       
+         
+        
+        
+        const table = mostrat.map((list) => `<tr>
+                                                 <td >${ lista.length }</td>,
+                                                 <td >${list.capital}</td>,
+                                                 <td >${list.interes}</td>,
+                                              </tr>`)
+         $('.interes-anual').append(newInteres);
+         $('.content-table tbody').append(table).closest('.content-table');
+         
+        // $('.content-list').append(template);
         
       
       };    
